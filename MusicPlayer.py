@@ -28,7 +28,12 @@ def main():
 
         for index, song in enumerate(mp3_files, start = 1):
             print(f"{index}. {song}")
-        break
+        
+        choice_input = input("\nEnter the song  # to play (or 'Q' to quit): ")
+
+        if choice_input.upper() == "Q":
+            print("Bye!")
+            break
 
 if __name__ == "__main__":
     main()
