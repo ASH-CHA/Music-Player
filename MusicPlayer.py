@@ -18,7 +18,17 @@ def main():
     
     # Test if file is mp3
     mp3_files = [file for file in os.listdir(folder) if file.endswith(".mp3")]
-    print(mp3_files)
+    
+    if not mp3_files:
+        print("No .mp3 files found!")
+
+    while True:
+        print("***** MP3 Player *****")
+        print("My song list:")
+
+        for index, song in enumerate(mp3_files, start = 1):
+            print(f"{index}. {song}")
+        break
 
 if __name__ == "__main__":
     main()
