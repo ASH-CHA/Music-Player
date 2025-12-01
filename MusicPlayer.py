@@ -8,5 +8,5 @@ def main():
         print("Audio Initialization Failed! ", e)
         return
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
