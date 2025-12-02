@@ -6,6 +6,16 @@ def play_music(folder, song_name):
 
     file_path = os.path.join(folder, song_name)
 
+    if not os.path.exists(file_path):
+        print("File not found")
+        return
+    
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
+
+    print(f"\nNow Playing: {song_name}")
+    print("Commands: [P]ause, [R]esume, [S]top")
+
 def main():
     try:
         pygame.mixer.init()
