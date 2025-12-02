@@ -16,6 +16,23 @@ def play_music(folder, song_name):
     print(f"\nNow Playing: {song_name}")
     print("Commands: [P]ause, [R]esume, [S]top")
 
+    while True:
+
+        command = input("> ").upper()
+
+        if command == "P":
+            pygame.mixer.music.pause()
+            print("Paused")
+        elif command == "R":
+            pygame.mixer.music.unpause()
+            print("Resumed")
+        elif command == "S":
+            pygame.mixer.music.stop()
+            print("Stopped")
+            return
+        else:
+            print("Invalid command")
+
 def main():
     try:
         pygame.mixer.init()
