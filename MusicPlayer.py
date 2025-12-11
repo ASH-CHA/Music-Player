@@ -14,7 +14,7 @@ def play_music(folder, song_name):
     pygame.mixer.music.play()
 
     print(f"\nNow Playing: {song_name}")
-    print("Commands: [P]ause, [R]esume, [S]top")
+    print("Commands: [P]ause, [R]esume, [S]top, Re[W]ind")
 
     while True:
 
@@ -30,6 +30,9 @@ def play_music(folder, song_name):
             pygame.mixer.music.stop()
             print("Stopped")
             return
+        elif command == "W":
+            pygame.mixer.music.rewind()
+            print("Rewinded")
         else:
             print("Invalid command")
 
